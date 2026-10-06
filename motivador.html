@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Motivador</title>
+
+        <style>
+            h1 {
+                color: blue
+            }
+
+            body {
+                background-color: black;
+                color: white
+            }
+        </style>
+    </head>
+
+    <body>
+      <h1>Proyecto Motivador</h1>
+
+      <button onclick="motivar()">Motívame</button>
+
+      <p id="Frase">Aquí aparecerá una frase</p>
+
+      <script>
+        function motivar() {
+
+            let frases = [
+            "Sigue aprendiendo",
+            "Cada día mejoras un poco más",
+            "La práctica crea habilidad",
+            "No te rindas",
+            "Hoy es un buen día para programar"
+        ]
+        let numero = Math.floor(Math.random() * frases.length)
+          let frase = document.getElementById("Frase");
+          frase.textContent = frases[numero]
+        }
+      </script>
+    </body>
+</html>
